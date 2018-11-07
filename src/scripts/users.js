@@ -20,7 +20,7 @@ function createUserItem(user) {
 
     propertyList.forEach(key => {
         const listItem = document.createElement('li');
-        const listItemText = document.createTextNode(user[key]);
+        const listItemText = document.createTextNode(`${key}: ${user[key]}`);
         listItem.classList.add('main-section-content__list__item');
 
         listItem.appendChild(listItemText);
