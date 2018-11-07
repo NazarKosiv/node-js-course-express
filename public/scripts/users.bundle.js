@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/users.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/scripts/users.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1981,10 +1981,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./src/services/http.js":
-/*!******************************!*\
-  !*** ./src/services/http.js ***!
-  \******************************/
+/***/ "./src/scripts/services/http.js":
+/*!**************************************!*\
+  !*** ./src/scripts/services/http.js ***!
+  \**************************************/
 /*! exports provided: HttpService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2021,16 +2021,16 @@ function () {
 
 /***/ }),
 
-/***/ "./src/users.js":
-/*!**********************!*\
-  !*** ./src/users.js ***!
-  \**********************/
+/***/ "./src/scripts/users.js":
+/*!******************************!*\
+  !*** ./src/scripts/users.js ***!
+  \******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _services_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/http */ "./src/services/http.js");
+/* harmony import */ var _services_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/http */ "./src/scripts/services/http.js");
 
 _services_http__WEBPACK_IMPORTED_MODULE_0__["HttpService"].getUsers('http://localhost:5000/user-list').then(function (userList) {
   var container = document.querySelector('.main-section-content');
@@ -2050,7 +2050,7 @@ function createUserItem(user) {
   userItemList.classList.add('main-section-content__list');
   propertyList.forEach(function (key) {
     var listItem = document.createElement('li');
-    var listItemText = document.createTextNode(user[key]);
+    var listItemText = document.createTextNode("".concat(key, ": ").concat(user[key]));
     listItem.classList.add('main-section-content__list__item');
     listItem.appendChild(listItemText);
     userItemList.appendChild(listItem);
