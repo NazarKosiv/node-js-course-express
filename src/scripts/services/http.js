@@ -6,5 +6,3 @@ export class HttpService {
             .then(res => res.data);
     }
 }
-
-module.exports = HttpService;

@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const express = require('express');
 
@@ -7,21 +8,13 @@ const rootDir = require('../utils/path');
 const router = express.Router();
 
 router.get('/user-list', (req, res) => {
-    const users = [{
-        name: 'Nazar',
-        age: 23,
-        country: 'Ukraine'
-    }, {
-        name: 'Arkadiy',
-        age: 22,
-        country: 'Ukraine'
-    }, {
-        name: 'Vitaliy',
-        age: 23,
-        country: 'Ukraine'
-    }];
-
-    res.send(users);
+    fs.readFile(path.join(rootDir, 'db', 'users.json'), {encoding: 'utf-8'}, (error, users) => {
+        if (error) {
+            console.log(error);
+        } else {
+            res.send(users)
+        }
+    });
 });
 
 router.get('/users', (req, res) => {

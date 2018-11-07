@@ -1,14 +1,16 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: Ubuntu, sans-serif; }
+  font-family: Ubuntu, sans-serif;
+}
 
 .main-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+}
 
 .main-section-content {
   width: 80%;
@@ -16,10 +18,11 @@ html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
 
 .main-section-content__item {
   width: 90%;
@@ -30,13 +33,14 @@ html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   padding: 20px;
-  margin-top: 5%; }
+  margin-top: 5%;
+}
 
 .main-section-header {
   width: 80%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -45,26 +49,30 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
 .main-section-header__nav {
   width: 500px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .main-section-header__nav-list {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+}
 
 .main-section-header__nav-list__item {
   display: block;
   justify-content: center;
   align-items: center;
   list-style: none;
-  margin: 0; }
+  margin: 0;
+}
 
 .main-section-header__nav-list__item a {
   font-family: Ubuntu, sans-serif;
@@ -81,17 +89,17 @@ html, body {
   background-color: #fff;
   border-radius: 20px;
   font-weight: bold;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+}
 
 .main-section-header__nav-list__item a:hover {
   background-color: #FFB932;
   border: 2px solid #fff;
-  color: #fff; }
+  color: #fff;
+}
 
 .main-section-header__nav-list__item.main-section-header__nav-list__item--active a {
   background-color: #FFB932;
   border: 2px solid #fff;
-  color: #fff; }
-
-
-/*# sourceMappingURL=main.css.map*/
+  color: #fff;
+}
