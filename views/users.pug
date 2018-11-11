@@ -1,0 +1,9 @@
+extends layouts/main
+
+block content
+    each user in users
+        .main-section__content__item
+            ul.main-section__content__list
+                li.main-section__content__list__item Name: #{user.name}
+                li.main-section__content__list__item Age: #{user.age}
+                li.main-section__content__list__item Country: #{user.country}
