@@ -9,8 +9,10 @@ const mainRoutes = require('./routes/main');
 
 const app = express();
 
+app.set('view engine', 'pug');
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json({extended: false}));
 app.use(express.static(path.join(rootDir, 'public')));
 
 app.use(mainRoutes);

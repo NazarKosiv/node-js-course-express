@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{pageTitle}
+        link(rel="stylesheet", href="/assets/styles/main.css")
+    body
+        section.main-section
+            header.main-section__header
+                nav.main-section__header__nav
+                    ul.main-section__header__nav-list
+                        li(class=(path === '/' ? 'main-section__header__nav-list__item main-section__header__nav-list__item--active' : 'main-section__header__nav-list__item'))
+                            a(href='/') Home
+                        li(class=(path === '/users' ? 'main-section__header__nav-list__item main-section__header__nav-list__item--active' : 'main-section__header__nav-list__item'))
+                            a(href='/users') Users
+            main.main-section__content
+                block content
+        block scripts
+

@@ -1,0 +1,23 @@
+extends layouts/main
+
+block content
+    .main-section__content__item
+        h1(style="text-align: center;") Create a user:
+        hr
+        form(action="/add-user", method="POST")
+            .main-section__content__item__form-group
+                .main-section__content__item__form-control
+                    label(for="name") Name:
+                    input(id="name", type="text", name="name")
+                .main-section__content__item__form-control
+                    label(for="age") Age:
+                    input(id="age", type="text", name="name")
+                .main-section__content__item__form-control
+                    label(for="country") Country:
+                    input(id="country", type="text", name="name")
+            .main-section__content__item__submit-button__container
+                button(type="submit", class="main-section__content__item__submit-button") Add
+
+    .main-section__content__notification.main-section__content__notification--hidden User was successfully added!
+block scripts
+    script(src="/scripts/home.bundle.js")
